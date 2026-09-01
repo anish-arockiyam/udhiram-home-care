@@ -1,0 +1,210 @@
+<udhiram-header />
+
+<main>
+  <section id="home" class="hero section">
+    <div class="hero-orb orb-one"></div>
+    <div class="hero-orb orb-two"></div>
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <span class="eyebrow"><span class="dot"></span> HOME CARE • COMFORT • DIGNITY</span>
+        <h1>Caring for your loved ones, <em> in the comfort of their home.</em></h1>
+        <p class="hero-lead">Professional, personalised and dependable care at home — helping individuals live with comfort, dignity and peace of mind.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#contact">Get a Care Consultation <udhiram-icon name="arrow" [size]="17" /></a>
+          <button class="button button-ghost" type="button" (click)="scrollToServices()">Explore Our Services</button>
+        </div>
+        <div class="trust-row" aria-label="Care highlights">
+          <span><udhiram-icon name="check" [size]="17" /> Qualified / Trained Caregivers</span>
+          <span><udhiram-icon name="heart" [size]="17" /> Personalised Care</span>
+          <span><udhiram-icon name="shield" [size]="17" /> Hygiene & Patient Safety</span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal delay-one">
+        <div class="image-frame">
+          <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1100&q=85"
+               alt="Caregiver warmly assisting an elderly person at home" />
+          <div class="floating-card">
+            <span class="mini-icon"><udhiram-icon name="heart" [size]="18" /></span>
+            <div><strong>Care with dignity</strong><small>Every person. Every day.</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro section">
+    <div class="container intro-grid">
+      <div class="intro-image reveal">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1559234938-b60fff04894d?auto=format&fit=crop&w=1000&q=85"
+               alt="Care professional spending time with a patient in a comfortable home setting" />
+        </div>
+        <div class="accent-card"><span>HOME</span><strong>Care that feels personal.</strong></div>
+      </div>
+      <div class="intro-copy reveal delay-one">
+        <udhiram-section-heading eyebrow="A thoughtful approach" title="Care That Comes Home"
+          description="At UDHIRAM HOME CARE NURSING, we understand that receiving care at home can provide comfort, familiarity and peace of mind. Our approach focuses on respectful, personalised and dependable support tailored to each individual's needs." />
+        <div class="intro-points">
+          <div><span><udhiram-icon name="home" [size]="18" /></span><strong>Comfort of home</strong><p>Support in a familiar environment.</p></div>
+          <div><span><udhiram-icon name="heart" [size]="18" /></span><strong>Respect & dignity</strong><p>Care that values the individual.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services section">
+    <div class="container">
+      <udhiram-section-heading [center]="true" eyebrow="Our support" title="Our Home Care Services"
+        description="Professional support tailored to individual care needs, delivered with compassion, dignity and attention to safety." />
+      <div class="service-grid">
+        @for (service of services; track service.title; let i = $index) {
+          <article class="service-card reveal" [class.delay-one]="i % 2 === 1">
+            <div class="service-icon"><udhiram-icon [name]="service.icon" [size]="25" /></div>
+            <div class="card-number">0{{ i + 1 }}</div>
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.description }}</p>
+            <a href="#contact" [attr.aria-label]="'Enquire about ' + service.title">Discuss this service <udhiram-icon name="arrow" [size]="15" /></a>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section id="why-choose" class="why-choose section">
+    <div class="container">
+      <udhiram-section-heading [center]="true" eyebrow="Peace of mind" title="Why Families Choose Us"
+        description="A people-first approach designed around comfort, communication and dependable support." />
+      <div class="feature-grid">
+        @for (feature of features; track feature.title) {
+          <article class="feature-card reveal">
+            <span class="feature-icon"><udhiram-icon [name]="feature.icon" [size]="23" /></span>
+            <h3>{{ feature.title }}</h3>
+            <p>{{ feature.description }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="care-banner section">
+    <div class="care-bg"></div>
+    <div class="container care-content">
+      <div class="care-copy">
+        <span class="eyebrow light">The heart of home care</span>
+        <h2>CARE <span>•</span> COMFORT <span>•</span> DIGNITY</h2>
+        <p>Because quality care is not just about assistance — it's about helping people feel safe, respected and comfortable at home.</p>
+        <a class="button button-light" href="#contact">Talk to Our Care Team <udhiram-icon name="arrow" [size]="17" /></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="why-trust" class="trust section">
+    <div class="container">
+      <div class="trust-heading">
+        <udhiram-section-heading eyebrow="Built around trust" title="Why Trust UDHIRAM HOME CARE NURSING ?"
+          description="Our service philosophy is grounded in respectful care, communication, safety and dependable support." />
+        <div class="trust-seal"><udhiram-icon name="shield" [size]="30" /><span>CARE<br><b>FIRST</b></span></div>
+      </div>
+      <div class="trust-grid">
+        @for (item of trustItems; track item[1]) {
+          <div class="trust-item reveal">
+            <span><udhiram-icon [name]="item[0]" [size]="22" /></span>
+            <strong>{{ item[1] }}</strong>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact section">
+    <div class="container contact-grid">
+      <div class="contact-copy">
+        <span class="eyebrow">Let's talk about care</span>
+        <h2>Your Family Deserves Care You Can Count On</h2>
+        <p>Contact us today for a consultation or care enquiry. We're here to understand your needs and help you explore suitable home-care options.</p>
+        <div class="contact-placeholders">
+          <div><span><udhiram-icon name="phone" [size]="19" /></span><div><small>Phone</small><a href="tel:+919600372923">96003 72923</a></div></div>
+          <div><span><udhiram-icon name="phone" [size]="19" /></span><div><small>WhatsApp</small><a href="https://wa.me/919600372923" target="_blank" rel="noopener noreferrer">96003 72923</a></div></div>
+          <div><span><udhiram-icon name="mail" [size]="19" /></span><div><small>Email</small><strong>udhiramhomecare@gmail.com</strong></div></div>
+          <div><span><udhiram-icon name="home" [size]="19" /></span><div><small>Address</small><strong>[YOUR ADDRESS]</strong></div></div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <div class="form-top">
+          <span class="form-icon"><udhiram-icon name="heart" [size]="22" /></span>
+          <div><h3>Make a Care Enquiry</h3><p>Tell us how we can help.</p></div>
+        </div>
+        <form [formGroup]="enquiryForm" (ngSubmit)="submitEnquiry()" novalidate>
+          <div class="form-grid">
+            <label>
+              <span>Full Name *</span>
+              <input formControlName="fullName" type="text" autocomplete="name" placeholder="Your full name" [class.invalid]="invalid('fullName')" />
+              @if (invalid('fullName')) { <small class="error">Please enter your name.</small> }
+            </label>
+            <label>
+              <span>Phone Number *</span>
+              <input formControlName="phone" type="tel" autocomplete="tel" placeholder="Your phone number" [class.invalid]="invalid('phone')" />
+              @if (invalid('phone')) { <small class="error">Please enter a valid phone number.</small> }
+            </label>
+          </div>
+          <label>
+            <span>Email Address</span>
+            <input formControlName="email" type="email" autocomplete="email" placeholder="you@example.com" [class.invalid]="invalid('email')" />
+            @if (invalid('email')) { <small class="error">Please enter a valid email address.</small> }
+          </label>
+          <div class="form-grid">
+            <label>
+              <span>Service Required *</span>
+              <select formControlName="service" [class.invalid]="invalid('service')">
+                <option value="">Select a service</option>
+                @for (service of services; track service.title) { <option [value]="service.title">{{ service.title }}</option> }
+              </select>
+              @if (invalid('service')) { <small class="error">Please select a service.</small> }
+            </label>
+            <label>
+              <span>Preferred Contact Method *</span>
+              <select formControlName="contactMethod">
+                <option>Phone</option><option>WhatsApp</option><option>Email</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            <span>Message</span>
+            <textarea formControlName="message" rows="4" placeholder="Briefly tell us what support you are looking for."></textarea>
+          </label>
+          <p class="privacy-note"><udhiram-icon name="shield" [size]="15" /> Please avoid sharing sensitive medical information through this form.</p>
+          <button class="button button-primary submit" type="submit">Send Enquiry <udhiram-icon name="arrow" [size]="17" /></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <a class="mobile-whatsapp" href="https://wa.me/919600372923" target="_blank"
+     rel="noopener noreferrer" aria-label="Contact Udhiram Home Care Nursing on WhatsApp">
+    <udhiram-icon name="phone" [size]="21" />
+    <span>WhatsApp Us</span>
+  </a>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand footer-brand" href="#home">
+        <span class="brand-mark"><udhiram-icon name="home" [size]="22" /></span>
+        <span class="brand-copy"><strong>UDHIRAM</strong><small>HOME CARE NURSING</small></span>
+      </a>
+      <p>Professional and compassionate home-care support focused on comfort, dignity and peace of mind.</p>
+    </div>
+    <div>
+      <h3>Explore</h3>
+      <a href="#home">Home</a><a href="#services">Services</a><a href="#why-choose">Why Choose Us</a><a href="#why-trust">Why Trust Us</a><a href="#contact">Contact</a>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p><a href="tel:+919600372923">96003 72923</a></p><p>udhiramhomecare@gmail.com</p><p>[YOUR ADDRESS]</p>
+    </div>
+  </div>
+  <div class="container footer-bottom"><span>© 2026 UDHIRAM HOME CARE NURSING. All rights reserved.</span><span>Care • Comfort • Dignity</span></div>
+</footer>
