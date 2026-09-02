@@ -1,14 +1,26 @@
+// :root {
+//   --rose: #b93d67;
+//   --deep-rose: #8e284d;
+//   --blush: #fff0f5;
+//   --blush-2: #fff8fb;
+//   --ink: #292126;
+//   --muted: #756b70;
+//   --line: #eee4e8;
+//   --body: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+//   --display: "Plus Jakarta Sans", "Manrope", system-ui, sans-serif;
+// }
 :root {
-  --rose: #b93d67;
-  --deep-rose: #8e284d;
-  --blush: #fff0f5;
-  --blush-2: #fff8fb;
+  --rose: #E83E8C;
+  --deep-rose: #C72F73;
+  --blush: #FFF0F7;
+  --blush-2: #FFF8FC;
   --ink: #292126;
-  --muted: #756b70;
-  --line: #eee4e8;
+  --muted: #756B70;
+  --line: #EEE4E8;
   --body: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --display: "Plus Jakarta Sans", "Manrope", system-ui, sans-serif;
 }
+
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { margin:0; color:var(--ink); background:#fff; font-family:var(--body); -webkit-font-smoothing:antialiased; }
